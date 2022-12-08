@@ -11,7 +11,8 @@ def game_even():
         random_number = random.randint(1, 99)
         print(f'Question: {random_number}')
         answer = prompt.string('Your answer: ')
-        if (answer == 'no' and random_number % 2) or (answer == 'yes' and not random_number % 2):
+        is_even_number = random_number % 2
+        if (answer == 'no' and is_even_number) or (answer == 'yes' and not is_even_number):
             print('Correct!')
         else:
             print(f"Let's try again, {name}!")
