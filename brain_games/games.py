@@ -12,9 +12,9 @@ def game_even():
         print(f'Question: {random_number}')
         answer = prompt.string('Your answer: ')
         if (answer == 'no' and random_number % 2) or (answer == 'yes' and not random_number % 2):
-    	    print('Correct!')
+            print('Correct!')
         else:
-    	    print(f"Let's try again, {name}!")
-    	    break
+            print(f"Let's try again, {name}!")
+            break
     else:
         print(f'Congratulations, {name}!')
