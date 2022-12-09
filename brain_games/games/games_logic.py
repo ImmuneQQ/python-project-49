@@ -66,3 +66,21 @@ def gcd_logic():
     if (answer == str(result)):
         return (True,)
     return (False, answer, result)
+
+
+def progression_logic():
+    start_number = random.randint(1, 9)
+    progression = random.randint(1, 9)
+    progression_list = [start_number]
+    for i in range(9):
+        progression_list.append(progression_list[i] + progression)
+    hide_index = random.randint(0, 9)
+    hide = progression_list[hide_index]
+    progression_list[hide_index] = '..'
+    progression_list = [str(i) for i in progression_list]
+    progression_str = ' '.join(progression_list)
+    print(f'Question: {progression_str}')
+    answer = prompt.string('Your answer: ')
+    if (answer == str(hide)):
+        return (True,)
+    return (False, answer, hide)
