@@ -16,7 +16,8 @@ def run_game(game_logic, game_rule):
         else:
             answer = game_result[1]
             result = game_result[2]
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
+            print(f"'{answer}' is wrong answer ;(."
+                  f" Correct answer was '{result}'.")
             print(f"Let's try again, {name}!")
             break
     if corrects_count == 3:
