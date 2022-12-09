@@ -4,7 +4,7 @@ from prompt import string
 
 
 def game_gcd():
-    game_rule = 'What is the result of the expression?'
+    game_rule = 'Find the greatest common divisor of given numbers.'
     run_game(gcd_logic, game_rule)
 
 
