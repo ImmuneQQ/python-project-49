@@ -29,7 +29,7 @@ python3 -m pip install --user dist/*.whl
 
 ---
 
-### Examples
+### Commands and examples
 
 brain-even:
 
