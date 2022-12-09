@@ -1,6 +1,26 @@
-from brain_games.games.games_logic import run_game, calc_logic
+from brain_games.games.run_game import run_game
+from random import randint
+from prompt import string
 
 
 def game_calc():
     game_rule = 'What is the result of the expression?'
     run_game(calc_logic, game_rule)
+
+
+def calc_logic():
+    number1 = randint(1, 9)
+    number2 = randint(1, 9)
+    operations = ('+', '-', '*')
+    operation = operations[randint(0, 2)]
+    print(f'Question: {number1} {operation} {number2}')
+    answer = string('Your answer: ')
+    if operation == '+':
+        result = number1 + number2
+    if operation == '-':
+        result = number1 - number2
+    if operation == '*':
+        result = number1 * number2
+    if (answer == str(result)):
+        return (True,)
+    return (False, answer, result)
