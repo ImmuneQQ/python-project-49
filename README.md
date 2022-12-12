@@ -21,10 +21,6 @@ This project was built using these tools:
 
 ### Installation
 
-poetry build
-
-poetry publish --dry-run
-
 python3 -m pip install --user dist/*.whl
 
 ---

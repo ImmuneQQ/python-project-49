@@ -1,11 +1,11 @@
-from brain_games.games.run_game import run_game
+from brain_games.engine import engine
 from random import randint
 from prompt import string
 
 
 def game_gcd():
     game_rule = 'Find the greatest common divisor of given numbers.'
-    run_game(gcd_logic, game_rule)
+    engine(gcd_logic, game_rule)
 
 
 def gcd_logic():

@@ -1,11 +1,11 @@
-from brain_games.games.run_game import run_game
+from brain_games.engine import engine
 from random import randint
 from prompt import string
 
 
 def game_prime():
     game_rule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    run_game(prime_logic, game_rule)
+    engine(prime_logic, game_rule)
 
 
 def prime_logic():
@@ -23,7 +23,9 @@ def is_prime(x):
         return False
     if x == 2 or x == 3:
         return True
-    for i in range(2, int(x ** 0.5) + 1):
+    if x % 2 == 0 or x < 2:
+        return False
+    for i in range(3, int(x ** 0.5) + 1, 2):
         if x % i == 0:
             return False
     return True

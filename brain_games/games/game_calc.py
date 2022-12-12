@@ -1,11 +1,11 @@
-from brain_games.games.run_game import run_game
+from brain_games.engine import engine
 from random import randint
 from prompt import string
 
 
 def game_calc():
     game_rule = 'What is the result of the expression?'
-    run_game(calc_logic, game_rule)
+    engine(calc_logic, game_rule)
 
 
 def calc_logic():

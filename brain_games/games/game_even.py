@@ -1,11 +1,11 @@
-from brain_games.games.run_game import run_game
+from brain_games.engine import engine
 from random import randint
 from prompt import string
 
 
 def game_even():
     game_rule = 'Answer "yes" if the number is even, otherwise answer "no".'
-    run_game(even_logic, game_rule)
+    engine(even_logic, game_rule)
 
 
 def even_logic():

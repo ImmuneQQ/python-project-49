@@ -1,7 +1,7 @@
 from prompt import string
 
 
-def run_game(game_logic, game_rule):
+def engine(game_logic, game_rule):
     print('Welcome to the Brain Games!')
     name = string('May I have your name? ')
     print(f'Hello, {name}!')

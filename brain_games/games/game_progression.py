@@ -1,11 +1,11 @@
-from brain_games.games.run_game import run_game
+from brain_games.engine import engine
 from random import randint
 from prompt import string
 
 
 def game_progression():
     game_rule = 'What number is missing in the progression?'
-    run_game(progression_logic, game_rule)
+    engine(progression_logic, game_rule)
 
 
 def progression_logic():
