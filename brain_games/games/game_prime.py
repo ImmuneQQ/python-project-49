@@ -24,7 +24,7 @@ def is_prime(x):
     if x % 2 == 0 or x % 3 == 0:
         return False
     limit = int(x**0.5)
-    for i in range(5, limit+1, 6):
-        if x % i == 0 or x % (i+2) == 0:
+    for i in range(5, limit + 1, 6):
+        if x % i == 0 or x % (i + 2) == 0:
             return False
     return True
